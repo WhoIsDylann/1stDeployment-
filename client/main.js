@@ -11,7 +11,7 @@ const supplyPic = () => {
 
         monkeImg.src = data;
 
-        monkeyDisplay.appendChild(monkeImg)
+        monkeyDisplay.src = monkeImg.src
 
         });
 };
