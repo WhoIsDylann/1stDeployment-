@@ -17,4 +17,6 @@ const supplyPic = () => {
 };
 
 
-document.getElementById('randomMonk').addEventListener('click' , supplyPic )
+document.getElementById('randomMonk').addEventListener('click' , supplyPic );
+
+document.getElementById('randomMonk').addEventListener('touch' , supplyPic )
