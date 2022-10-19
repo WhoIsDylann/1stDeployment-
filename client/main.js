@@ -1,5 +1,5 @@
 const supplyPic = () => {
-    axios.get("http://localhost:4000/monkes")
+    axios.get("/monkes")
     .then(res => {
         
         const {data} = res
