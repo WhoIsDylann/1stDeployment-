@@ -27,7 +27,7 @@ module.exports = {
     },
 
     supplyPic: (req, res) => {
-        Rollbar.console.log("got a monke");
+        Rollbar.log('user got a random monke')
         let randomNum = Math.floor(Math.random() * monkePix.length);
         res.status(200).send(monkePix[randomNum]); }
 
