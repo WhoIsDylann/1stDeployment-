@@ -1,4 +1,5 @@
 const path = require('path')
+const Rollbar = require('rollbar')
 
 let monkePix = ["https://play-lh.googleusercontent.com/T_vA5l9W1-XYTmgr3gCB2MBd7QmA-iG0wcm09_IFWNB-4gOpnS-tYNEmcalwdixSyw" , 
 
@@ -26,6 +27,7 @@ module.exports = {
     },
 
     supplyPic: (req, res) => {
+        Rollbar.console.log("got a monke");
         let randomNum = Math.floor(Math.random() * monkePix.length);
         res.status(200).send(monkePix[randomNum]); }
 

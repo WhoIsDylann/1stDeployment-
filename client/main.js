@@ -6,12 +6,8 @@ const supplyPic = () => {
         console.log(data);
         
         let monkeyDisplay = document.getElementById('monkeys');
-
-        let monkeImg = document.createElement('img');
-
-        monkeImg.src = data;
-
-        monkeyDisplay.src = monkeImg.src
+        
+        monkeyDisplay.src = data
 
         });
 };
