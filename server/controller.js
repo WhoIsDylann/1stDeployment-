@@ -1,5 +1,11 @@
 const path = require('path')
-const Rollbar = require('rollbar')
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: 'd3087ef411f04608888796499ea6ee17',
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
+rollbar.log('Hello world!')
 
 let monkePix = ["https://play-lh.googleusercontent.com/T_vA5l9W1-XYTmgr3gCB2MBd7QmA-iG0wcm09_IFWNB-4gOpnS-tYNEmcalwdixSyw" , 
 
@@ -27,7 +33,7 @@ module.exports = {
     },
 
     supplyPic: (req, res) => {
-        Rollbar.log('user got a random monke')
+        rollbar.log('user got a random monke')
         let randomNum = Math.floor(Math.random() * monkePix.length);
         res.status(200).send(monkePix[randomNum]); }
 
