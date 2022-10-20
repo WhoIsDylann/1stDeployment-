@@ -2,6 +2,13 @@ const express = require('express');
 const cors = require('cors');
 const port = process.env.PORT || 4000
 const app = express()
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: 'd3087ef411f04608888796499ea6ee17',
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
+rollbar.log('Hello world!')
 
 app.use(express.json())
 app.use(cors())
